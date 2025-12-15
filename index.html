@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Clinical Psychologist | Private Practice</title>
+  <meta name="description" content="Private psychological therapy and assessment. Evidence-based, confidential, and client-focused care.">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #f6f7f6;
+      --bg-card: #ffffff;
+      --text-main: #2f2f2f;
+      --text-muted: #6f6f6f;
+      --accent: #6a8f85;
+      --border-soft: #e5e7e6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      margin-top: 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 56px 0;
+    }
+
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .header-inner {
+      padding: 28px 0;
+    }
+
+    .header-inner h1 {
+      font-size: 2rem;
+      margin-bottom: 6px;
+    }
+
+    .header-inner p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    section {
+      background: var(--bg-card);
+      border-radius: 12px;
+      padding: 36px;
+      margin-bottom: 28px;
+      border: 1px solid var(--border-soft);
+    }
+
+    section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .intro {
+      font-size: 1.05rem;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border-soft);
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      padding: 28px 0 40px;
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 28px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-inner">
+    <h1>Dr [Full Name]</h1>
+    <p>Clinical Psychologist · HCPC Registered</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <section>
+    <p class="intro">
+      I am a UK-based Clinical Psychologist offering private psychological therapy and assessment for adults.
+      My work is grounded in evidence-based practice and a collaborative, compassionate approach.
+    </p>
+  </section>
+
+  <section>
+    <h2>Areas of work</h2>
+    <ul>
+      <li>Anxiety and stress-related difficulties</li>
+      <li>Depression and low mood</li>
+      <li>Life transitions and adjustment</li>
+      <li>Self-esteem and emotional regulation</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Approach</h2>
+    <p>
+      I work integratively, drawing from approaches such as CBT and compassion-focused therapy.
+      Sessions are tailored to each individual, with an emphasis on safety, clarity, and practical change.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+
+    <form action="https://formspree.io/f/XXXXXXXX" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" rows="5" placeholder="General enquiry" required></textarea>
+
+      <!-- spam protection -->
+      <input type="text" name="_gotcha" style="display:none">
+
+      <button type="submit">Send enquiry</button>
+    </form>
+
+    <p class="note">
+      Please do not include sensitive personal or health information in this form.
+      This contact form is for general enquiries only and is not monitored for urgent support.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    This website does not provide emergency services.
+    If you are in immediate danger, please contact emergency services or your GP.
+  </p>
+</footer>
+
+</body>
+</html>
