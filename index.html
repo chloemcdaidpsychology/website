@@ -4,21 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Chloe McDaid Psychology | Remote Therapy for Adults</title>
+  <title>Dr Chloe McDaid Psychology | Remote Therapy For Adults</title>
   <meta name="description" content="UK Clinical Psychologist offering remote therapy for adults. Compassionate, evidence-based care." />
 
   <!-- Social sharing -->
-  <meta property="og:title" content="Chloe McDaid Psychology" />
-  <meta property="og:description" content="UK Clinical Psychologist · Remote therapy for adults." />
+  <meta property="og:title" content="Dr Chloe McDaid Psychology" />
+  <meta property="og:description" content="UK Clinical Psychologist · Remote Therapy For Adults." />
   <meta property="og:type" content="website" />
-
-  <!-- Optional later (when you have a share image): -->
-  <!-- <meta property="og:image" content="https://www.chloemcdaidpsychology.co.uk/og.jpg" /> -->
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Basic SEO -->
   <meta name="robots" content="index,follow" />
@@ -38,15 +30,21 @@
       --brown: #6b4a34;
 
       --max: 980px;
+      --line: rgba(0,0,0,.10);
+      --shadow: 0 14px 30px rgba(45,38,33,.08);
+      --radius: 18px;
     }
 
     *{ box-sizing: border-box; }
     html{ scroll-behavior:smooth; }
+
     body{
       margin:0;
-      background: var(--bg);
+      background: radial-gradient(950px 520px at 10% 0%, rgba(192,138,90,.10), transparent 55%),
+                  radial-gradient(900px 480px at 90% 10%, rgba(107,74,52,.10), transparent 55%),
+                  var(--bg);
       color: var(--ink);
-      font-family: "Instrument Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family: Avenir, "Avenir Next", "Avenir Next LT Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       line-height: 1.8;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -59,25 +57,26 @@
       top: 12px;
       padding:10px 14px;
       background: var(--paper);
-      border: 1px solid rgba(0,0,0,.12);
+      border: 1px solid var(--line);
       border-radius: 999px;
       color: var(--ink);
       text-decoration:none;
       z-index: 999;
+      font-weight: 700;
     }
     .skip-link:focus{ left: 12px; }
 
     /* Type */
     h1,h2,h3{
-      font-family: "DM Serif Display", serif;
-      font-weight: 400;
+      font-family: Avenir, "Avenir Next", "Avenir Next LT Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-weight: 900;
       letter-spacing: -0.01em;
       margin: 0 0 14px;
       color: var(--ink);
     }
     h1{ font-size: clamp(2.2rem, 4.2vw, 3.1rem); line-height: 1.08; }
     h2{ font-size: clamp(1.8rem, 3vw, 2.3rem); line-height: 1.15; }
-    h3{ font-size: 1.2rem; line-height: 1.25; }
+    h3{ font-size: 1.2rem; line-height: 1.25; font-weight: 850; }
 
     p{
       margin: 0 0 18px;
@@ -87,7 +86,7 @@
     }
 
     a{ color: inherit; }
-    a:hover{ text-decoration: none; opacity: .9; }
+    a:hover{ text-decoration: none; opacity: .92; }
 
     .wrap{
       width: min(var(--max), 92%);
@@ -99,29 +98,46 @@
       position: sticky;
       top: 0;
       z-index: 30;
-      background: rgba(247,242,236,.78);
+      background: rgba(247,242,236,.88);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(0,0,0,.06);
     }
+
     .topbar{
       display:flex;
-      align-items: baseline;
+      align-items: center;
       justify-content: space-between;
       gap: 16px;
-      padding: 16px 0;
+      padding: 14px 0;
     }
-    .brand{
+
+    .brandwrap{
+      display:flex;
+      align-items:center;
+      gap: 14px;
+      min-width: 260px;
+    }
+
+    .logo-wide{
+      height: 42px;
+      width: auto;
+      display: block;
+    }
+
+    .brandtext{
       display:grid;
       gap: 2px;
-      line-height: 1.1;
+      line-height: 1.15;
     }
-    .brand .name{
-      font-family: "DM Serif Display", serif;
-      font-size: 1.1rem;
+    .brandtext .name{
+      font-weight: 950;
+      letter-spacing: .01em;
+      font-size: 1.0rem;
     }
-    .brand .desc{
-      font-size: .95rem;
+    .brandtext .desc{
+      font-size: .92rem;
       color: var(--muted);
+      font-weight: 650;
     }
 
     nav{
@@ -134,22 +150,39 @@
       color: var(--muted);
       text-decoration: none;
       padding: 6px 0;
-      border-bottom: 1px solid transparent;
+      border-bottom: 2px solid transparent;
+      font-weight: 750;
     }
     nav a:hover{
       color: var(--ink);
-      border-bottom-color: rgba(0,0,0,.2);
+      border-bottom-color: rgba(0,0,0,.18);
     }
+
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 10px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(0,0,0,.10);
+      background: linear-gradient(180deg, var(--clay), var(--brown));
+      color: #fff;
+      font-weight: 900;
+      text-decoration:none;
+      box-shadow: 0 12px 24px rgba(107,74,52,.14);
+      white-space: nowrap;
+    }
+    .cta:hover{ opacity: .95; text-decoration:none; }
 
     /* Sections */
     section{ padding: 92px 0; }
     .section-tight{ padding: 72px 0; }
 
-    /* IG-style top strip + dotted rule (used across sections) */
+    /* Strip */
     .strip{
       height: 54px;
       background: var(--brown);
-      opacity: .92;
+      opacity: .94;
     }
     .strip-label{
       display:flex;
@@ -160,13 +193,11 @@
       color: rgba(251,247,242,.92);
       font-size: .95rem;
       letter-spacing: .02em;
+      font-weight: 750;
     }
     .strip-label strong{
-      font-weight: 500;
+      font-weight: 950;
       color: rgba(251,247,242,.98);
-    }
-    .dotted-rule{
-      border-top: 2px dotted rgba(107,74,52,.55);
     }
 
     /* Hero */
@@ -193,6 +224,7 @@
       background: #f1dfcf;
       border: 1px solid rgba(0,0,0,.08);
       margin-inline: auto;
+      box-shadow: var(--shadow);
     }
     .headshot img{
       width:100%;
@@ -201,25 +233,22 @@
       display:block;
     }
 
+    /* (Removed the dot + made bolder) */
     .kicker{
       display:flex;
       align-items:center;
       gap: 12px;
-      color: var(--muted);
+      color: var(--ink);
       margin-bottom: 14px;
-      font-size: 1rem;
-    }
-    .dot{
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--clay);
-      box-shadow: 0 0 0 8px rgba(192,138,90,.16);
+      font-size: .92rem;
+      font-weight: 950;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      opacity: .9;
     }
 
     .hero p{ max-width: 64ch; }
 
-    /* Links: editorial */
     .actions{
       display:flex;
       flex-wrap: wrap;
@@ -235,18 +264,45 @@
       font-size: 1rem;
       color: var(--ink);
       text-decoration: none;
-      border-bottom: 1px solid rgba(0,0,0,.18);
+      border-bottom: 2px solid rgba(0,0,0,.14);
+      font-weight: 850;
     }
     .linkbtn.primary{
       color: var(--clay);
       border-bottom-color: rgba(192,138,90,.55);
     }
-    .linkbtn:hover{ opacity: .85; }
+    .linkbtn:hover{ opacity: .88; }
 
     .rule{
       height:1px;
       background: rgba(0,0,0,.08);
       margin-top: 56px;
+    }
+
+    /* Verification badges */
+    .badges{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,.10);
+      background: rgba(251,247,242,.92);
+      text-decoration: none;
+      font-weight: 900;
+      color: var(--ink);
+      box-shadow: 0 10px 22px rgba(45,38,33,.06);
+    }
+    .badge img{
+      height: 28px;
+      width: auto;
+      display: block;
     }
 
     /* Two-column */
@@ -277,6 +333,8 @@
       font-size: 1.1rem;
       margin-bottom: 28px;
       letter-spacing: .02em;
+      font-weight: 950;
+      background: rgba(251,247,242,.35);
     }
     .slide p{
       font-size: 1.08rem;
@@ -296,7 +354,7 @@
       max-width: 640px;
       margin: 0 auto 44px;
       padding-top: 18px;
-      border-top: 2px dotted rgba(107,74,52,.45);
+      border-top: 1px solid rgba(0,0,0,.10); /* no dotted lines */
     }
     .price-item:first-of-type{
       border-top: 0;
@@ -310,47 +368,52 @@
       margin-bottom: 10px;
     }
     .price-head span{
-      font-family: "DM Serif Display", serif;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--ink);
+      font-weight: 950;
     }
     .price-head strong{
-      font-weight: 500;
-      font-size: 1.2rem;
+      font-weight: 950;
+      font-size: 1.15rem;
       color: var(--ink);
       white-space: nowrap;
     }
-    .prices-note{
-      text-align:center;
-      margin-top: 46px;
-      color: var(--muted);
-      font-size: 1rem;
+
+    /* Different font for concession */
+    .concession{
+      max-width: 640px;
+      margin: 26px auto 0;
+      padding: 16px 18px;
+      border-radius: 14px;
+      background: rgba(251,247,242,.9);
+      border: 1px solid rgba(0,0,0,.10);
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: rgba(45,38,33,.85);
+      font-size: 1.03rem;
     }
 
-    /* =========================
-       CONTACT – Instagram theme
-       ========================= */
-
+    /* Contact */
     .contact{
       background: var(--paper);
       padding: 0;
     }
     .contact-body{
-      padding: 56px 0 76px;
+      padding: 56px 0 40px;
     }
 
     .contact-panel{
       max-width: 720px;
       margin: 0 auto;
       background: var(--sand);
-      border: 2px solid rgba(107,74,52,.55);
-      border-radius: 10px;
+      border: 1px solid rgba(107,74,52,.28);
+      border-radius: 12px;
       overflow: hidden;
+      box-shadow: var(--shadow);
     }
     .contact-panel__top{
       padding: 22px 22px 18px;
-      background: rgba(107,74,52,.08);
-      border-bottom: 2px dotted rgba(107,74,52,.55);
+      background: rgba(107,74,52,.06);
+      border-bottom: 1px solid rgba(0,0,0,.10); /* no dotted */
     }
     .contact-panel__top h2{
       margin-bottom: 8px;
@@ -367,14 +430,6 @@
       display: grid;
       gap: 14px;
     }
-    .field{
-      padding: 14px 0 0;
-      border-top: 2px dotted rgba(107,74,52,.45);
-    }
-    .field:first-child{
-      border-top: 0;
-      padding-top: 0;
-    }
 
     label{
       display: block;
@@ -382,21 +437,22 @@
       font-size: .95rem;
       letter-spacing: .02em;
       color: rgba(45,38,33,.85);
+      font-weight: 900;
     }
 
     input, textarea{
       width: 100%;
       font: inherit;
       padding: 12px 12px;
-      border-radius: 8px;
-      border: 1px solid rgba(107,74,52,.35);
-      background: rgba(251,247,242,.85);
+      border-radius: 10px;
+      border: 1px solid rgba(107,74,52,.25);
+      background: rgba(251,247,242,.92);
       outline: none;
       margin: 0;
     }
     input:focus, textarea:focus{
-      border-color: rgba(107,74,52,.7);
-      box-shadow: none;
+      border-color: rgba(107,74,52,.55);
+      box-shadow: 0 0 0 4px rgba(192,138,90,.14);
     }
     textarea{
       min-height: 160px;
@@ -410,7 +466,7 @@
       align-items: center;
       margin-top: 16px;
       padding-top: 16px;
-      border-top: 2px dotted rgba(107,74,52,.45);
+      border-top: 1px solid rgba(0,0,0,.10); /* no dotted */
     }
 
     .submit{
@@ -419,7 +475,7 @@
       border: 0;
       background: var(--brown);
       color: #fff;
-      font-weight: 500;
+      font-weight: 950;
       font-size: 1rem;
       cursor: pointer;
     }
@@ -431,11 +487,12 @@
     }
     .alt-contact a{
       text-decoration: none;
-      border-bottom: 1px solid rgba(0,0,0,.2);
+      border-bottom: 2px solid rgba(0,0,0,.16);
       padding-bottom: 2px;
+      font-weight: 900;
     }
     .alt-contact a:hover{
-      border-bottom-color: rgba(0,0,0,.35);
+      border-bottom-color: rgba(0,0,0,.28);
     }
 
     .fineprint{
@@ -456,12 +513,13 @@
     .footer-links a{
       color: var(--muted);
       text-decoration: none;
-      border-bottom: 1px solid rgba(0,0,0,.14);
+      border-bottom: 2px solid rgba(0,0,0,.12);
       padding-bottom: 2px;
+      font-weight: 900;
     }
     .footer-links a:hover{
       color: var(--ink);
-      border-bottom-color: rgba(0,0,0,.28);
+      border-bottom-color: rgba(0,0,0,.22);
       opacity: 1;
     }
 
@@ -471,6 +529,14 @@
       color: var(--muted);
       font-size: .98rem;
       background: var(--bg);
+      border-top: 1px solid rgba(0,0,0,.06);
+    }
+    .footer-logo{
+      height: 34px;
+      width: auto;
+      display:inline-block;
+      opacity: .95;
+      margin-bottom: 10px;
     }
 
     /* Legal */
@@ -491,6 +557,7 @@
       .actions{ justify-content:center; }
       .hero p{ margin-left:auto; margin-right:auto; }
       .two{ grid-template-columns: 1fr; gap: 26px; }
+      .brandwrap{ min-width: unset; }
     }
   </style>
 
@@ -499,13 +566,13 @@
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Chloe McDaid Psychology",
+    "name": "Dr Chloe McDaid Psychology",
     "url": "https://www.chloemcdaidpsychology.co.uk/",
     "email": "hello@chloemcdaidpsychology.co.uk",
     "sameAs": ["https://www.instagram.com/chloemcdaidpsychology/"],
     "areaServed": "GB",
     "serviceType": "Clinical psychology / psychotherapy (online)",
-    "image": "https://www.chloemcdaidpsychology.co.uk/chloe.jpeg"
+    "image": "https://www.chloemcdaidpsychology.co.uk/chloe.png"
   }
   </script>
 </head>
@@ -515,9 +582,12 @@
 
 <header>
   <div class="wrap topbar">
-    <div class="brand">
-      <div class="name">Chloe McDaid Psychology</div>
-      <div class="desc">UK Clinical Psychologist · Remote therapy for adults</div>
+    <div class="brandwrap">
+      <img class="logo-wide" src="chloelogo.png" alt="Chloe McDaid Psychology logo" />
+      <div class="brandtext">
+        <div class="name">Dr Chloe McDaid</div>
+        <div class="desc">UK Clinical Psychologist · Remote Therapy For Adults</div>
+      </div>
     </div>
 
     <nav aria-label="Site">
@@ -527,6 +597,8 @@
       <a href="#contact">Contact</a>
       <a href="#privacy">Privacy</a>
     </nav>
+
+    <a class="cta" href="#contact">Get In Touch</a>
   </div>
 </header>
 
@@ -536,32 +608,43 @@
   <section class="hero">
     <div class="wrap hero-head">
       <div class="kicker">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Flexible · Affordable · Evidence-based care</span>
+        Flexible · Affordable · Evidence-Based Care
       </div>
     </div>
 
     <div class="wrap hero-grid">
       <div class="headshot">
-        <img src="chloe.jpeg" alt="Chloe McDaid, Clinical Psychologist">
+        <img src="chloe.png" alt="Dr Chloe McDaid, Clinical Psychologist">
       </div>
 
       <div>
-        <h1>Are you feeling <span style="color: var(--clay);">overwhelmed</span> trying to find a therapist?</h1>
+        <h1>Are You Feeling <span style="color: var(--clay);">Overwhelmed</span> Trying To Find A Therapist?</h1>
 
         <p>
           I offer remote psychological therapy for adults across the UK.
-          My approach is calm, compassionate and practical — we’ll work together to make sense of what’s happening
+          My approach is calm, compassionate and practical — we will work together to make sense of what is happening
           and build tools that support meaningful change.
         </p>
 
         <div class="actions">
-          <a class="linkbtn primary" href="#contact">Get in touch →</a>
-          <a class="linkbtn" href="#therapy">How I work →</a>
+          <a class="linkbtn primary" href="#contact">Get In Touch →</a>
+          <a class="linkbtn" href="#therapy">How I Work →</a>
           <a class="linkbtn" href="#prices">Prices →</a>
         </div>
 
         <div class="rule" aria-hidden="true"></div>
+
+        <div class="badges" aria-label="Professional verification badges">
+          <a class="badge" href="https://www.hcpc-uk.org/check-the-register/" target="_blank" rel="noopener noreferrer">
+            <img src="hpcchloe.png" alt="HCPC badge" />
+            <span>HCPC Registered</span>
+          </a>
+
+          <!-- Replace this with your real Psychology Today profile URL -->
+          <a class="badge" href="https://www.psychologytoday.com/" target="_blank" rel="noopener noreferrer">
+            <span>Psychology Today Profile</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -581,10 +664,10 @@
       </div>
 
       <div>
-        <h2>Who I work with</h2>
+        <h2>Who I Work With</h2>
         <p>
           People come to therapy for lots of reasons — feeling stuck, overwhelmed, anxious, low, or simply wanting
-          to understand themselves better. We’ll take things gently and focus on what matters most to you.
+          to understand themselves better. We will take things gently and focus on what matters most to you.
         </p>
         <p>
           <strong>Remote therapy</strong> can be a good fit if you want flexibility, privacy, and support that fits around life.
@@ -598,54 +681,42 @@
     <div class="strip">
       <div class="wrap strip-label">
         <span><strong>01</strong> · Therapy</span>
-        <span>My approach</span>
+        <span>My Approach</span>
       </div>
     </div>
-    <div class="dotted-rule"></div>
 
     <div class="wrap slide-inner">
       <div class="slide-number">01</div>
-      <h2>My approach</h2>
+      <h2>My Approach</h2>
       <p>
-        Therapy is collaborative. We’ll explore what’s going on, make sense of patterns, and find practical ways forward.
+        Therapy is collaborative. We will explore what is going on, make sense of patterns, and find practical ways forward.
         Sessions are shaped around your goals, your needs, and what feels most helpful to you.
       </p>
-    </div>
-  </section>
 
-  <!-- THERAPY 02 -->
-  <section class="slide" style="background: var(--sand);">
-    <div class="strip">
-      <div class="wrap strip-label">
-        <span><strong>02</strong> · Therapy</span>
-        <span>Tracking the nervous system</span>
-      </div>
-    </div>
-    <div class="dotted-rule"></div>
-
-    <div class="wrap slide-inner">
-      <div class="slide-number">02</div>
-      <h2>Tracking the Nervous System</h2>
-      <p>
-        We’re noticing shifts in your breathing, posture, tone, and pace — subtle signs of stress, safety, overwhelm,
-        or shutdown — and adjusting the session to help your body and mind feel regulated.
+      <p style="margin-top:18px;">
+        You can also view my <strong>
+          <a href="https://www.psychologytoday.com/" target="_blank" rel="noopener noreferrer">
+            Psychology Today Profile
+          </a>
+        </strong>.
       </p>
     </div>
   </section>
 
-  <!-- THERAPY 03 -->
+  <!-- THERAPY 02 (Nervous system section removed) -->
+
+  <!-- THERAPY 02 -->
   <section class="slide" style="background: var(--paper);">
     <div class="strip">
       <div class="wrap strip-label">
-        <span><strong>03</strong> · Therapy</span>
-        <span>Evidence-based support</span>
+        <span><strong>02</strong> · Therapy</span>
+        <span>Evidence-Based Support</span>
       </div>
     </div>
-    <div class="dotted-rule"></div>
 
     <div class="wrap slide-inner">
-      <div class="slide-number">03</div>
-      <h2>Evidence-based support</h2>
+      <div class="slide-number">02</div>
+      <h2>Evidence-Based Support</h2>
       <p>
         I work integratively, drawing from evidence-based approaches (including CBT-informed work and compassion-focused
         therapy). Sessions are tailored to you, with an emphasis on safety, clarity, and sustainable change.
@@ -658,10 +729,9 @@
     <div class="strip">
       <div class="wrap strip-label">
         <span><strong>Prices</strong></span>
-        <span>Fees & sessions</span>
+        <span>Fees And Sessions</span>
       </div>
     </div>
-    <div class="dotted-rule"></div>
 
     <div class="wrap prices-body">
       <div class="center-title">
@@ -670,7 +740,7 @@
 
       <div class="price-item">
         <div class="price-head">
-          <span>50-minute session</span>
+          <span>50-Minute Session</span>
           <strong>£85</strong>
         </div>
         <p>
@@ -680,18 +750,18 @@
 
       <div class="price-item">
         <div class="price-head">
-          <span>Extended session</span>
+          <span>Extended Session</span>
           <strong>£100</strong>
         </div>
         <p>
           An extended 80-minute session can be useful if there is a lot you want to talk about,
-          or where a longer ‘wind-down’ period feels important.
+          or where a longer wind-down period feels important.
         </p>
       </div>
 
       <div class="price-item">
         <div class="price-head">
-          <span>Block booking</span>
+          <span>Block Booking</span>
           <strong>£306</strong>
         </div>
         <p>
@@ -699,9 +769,9 @@
         </p>
       </div>
 
-      <p class="prices-note">
+      <div class="concession">
         Please note I offer a concession rate — please enquire if you think you may be eligible.
-      </p>
+      </div>
     </div>
   </section>
 
@@ -710,10 +780,9 @@
     <div class="strip">
       <div class="wrap strip-label">
         <span><strong>Contact</strong></span>
-        <span>General enquiry</span>
+        <span>General Enquiry</span>
       </div>
     </div>
-    <div class="dotted-rule"></div>
 
     <div class="wrap contact-body" style="text-align:center; max-width: 820px;">
       <h2>Contact</h2>
@@ -725,25 +794,25 @@
     <div class="wrap" style="padding-bottom: 76px;">
       <div class="contact-panel">
         <div class="contact-panel__top">
-          <h2 style="margin:0;">General enquiry</h2>
+          <h2 style="margin:0;">General Enquiry</h2>
           <p style="margin:0;">
-            Please don’t include sensitive personal or health information here.
+            Please do not include sensitive personal or health information here.
           </p>
         </div>
 
         <div class="contact-panel__body">
           <form action="https://formspree.io/f/XXXXXXXX" method="POST" class="form-grid">
-            <div class="field">
-              <label for="name">Your name</label>
+            <div>
+              <label for="name">Your Name</label>
               <input id="name" name="name" type="text" autocomplete="name" required>
             </div>
 
-            <div class="field">
-              <label for="email">Your email</label>
+            <div>
+              <label for="email">Your Email</label>
               <input id="email" name="email" type="email" autocomplete="email" required>
             </div>
 
-            <div class="field">
+            <div>
               <label for="message">Message</label>
               <textarea id="message" name="message" placeholder="General enquiry" required></textarea>
             </div>
@@ -752,7 +821,7 @@
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
             <div class="contact-actions">
-              <button class="submit" type="submit">Send enquiry</button>
+              <button class="submit" type="submit">Send Enquiry</button>
 
               <div class="alt-contact">
                 Prefer email?
@@ -776,10 +845,9 @@
     <div class="strip">
       <div class="wrap strip-label">
         <span><strong>Privacy</strong></span>
-        <span>How your information is used</span>
+        <span>How Your Information Is Used</span>
       </div>
     </div>
-    <div class="dotted-rule"></div>
 
     <div class="wrap legal-body">
       <h2>Privacy</h2>
@@ -788,24 +856,24 @@
         I will use your details only to respond to your enquiry.
       </p>
 
-      <h3>What information is collected</h3>
+      <h3>What Information Is Collected</h3>
       <ul>
         <li>Contact form: your name, email address, and the message you submit.</li>
         <li>Email: any information you include when you contact me directly.</li>
       </ul>
 
-      <h3>How it is used</h3>
+      <h3>How It Is Used</h3>
       <ul>
         <li>To respond to your enquiry and arrange next steps if appropriate.</li>
-        <li>To keep a short record of communications for administrative purposes.</li>
+        <li>To keep a short record of communications for administrative purposes         .</li>
       </ul>
 
-      <h3>How it is stored</h3>
+      <h3>How It Is Stored</h3>
       <p>
         Messages sent via the contact form are delivered to my email inbox. I take reasonable steps to keep this information secure.
       </p>
 
-      <h3>What not to include</h3>
+      <h3>What Not To Include</h3>
       <p>
         Please do not include sensitive personal or health information in the contact form. If you need urgent support,
         contact emergency services or your GP.
@@ -829,6 +897,8 @@
 
 <footer>
   <div class="wrap">
+    <img class="footer-logo" src="chloelogo.png" alt="Chloe McDaid Psychology logo" />
+
     <p>
       This website does not provide emergency services. If you are in immediate danger,
       please contact emergency services or your GP.
@@ -838,9 +908,11 @@
       <a href="mailto:hello@chloemcdaidpsychology.co.uk">Email</a>
       <a href="https://www.instagram.com/chloemcdaidpsychology/" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="#privacy">Privacy</a>
+      <!-- Replace with your real Psychology Today profile URL -->
+      <a href="https://www.psychologytoday.com/" target="_blank" rel="noopener noreferrer">Psychology Today</a>
     </div>
 
-    <p style="margin-top:18px;">© <span id="year"></span> Chloe McDaid Psychology</p>
+    <p style="margin-top:18px;">© <span id="year"></span> Dr Chloe McDaid Psychology</p>
   </div>
 </footer>
 
